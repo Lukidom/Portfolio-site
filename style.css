@@ -29,8 +29,8 @@ body {
 }
 
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 3px solid #3b82f6;
     margin-bottom: 20px;
@@ -79,7 +79,7 @@ li {
 }
 
 .navbar {
-    background: #111827;
+    background: #798294;
     padding: 15px;
     text-align: center;
 }
@@ -93,4 +93,73 @@ li {
 
 .navbar a:hover {
     color: #3b82f6;
+}
+
+.work-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* Layout */
+.work-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+/* Flip layout */
+.work-item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text */
+.work-text {
+    flex: 1;
+}
+
+.work-text h2 {
+    margin-bottom: 10px;
+}
+
+/* Images */
+.work-item img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.education-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.education-section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Card style */
+.edu-item {
+    background: #111827;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.edu-item:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+.edu-item h2 {
+    margin-bottom: 10px;
+}
+
+.edu-item p {
+    color: #9ca3af;
 }
