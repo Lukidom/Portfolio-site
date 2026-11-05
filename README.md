@@ -4,22 +4,23 @@
 
  
 ## Description
-I have built a simple portfolio web app to demonstrate to future employees my hirability. 
+I have built a simple portfolio web app to demonstrate to future employers my hirability. 
 
 ## Features
 - Home tab - Welcome tab
-- Wrok tab
+- Projects tab - Selected coding work
+- Work tab
 - Education and personal tab
 
 ## Installation
-The server is hosted on Github pages and can be accessed via the following link. 
+The server is hosted on GitHub Pages and can be accessed via the following link. 
 
-https://github.com/Lukidom/Portfolio-site
+https://lukidom.github.io/Portfolio-site/
 
 
 ## Languages
 
-The program is bult with Html and Css alone. 
+The program is built with HTML and CSS alone. 
 
 ## info
 
