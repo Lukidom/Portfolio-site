@@ -6,14 +6,34 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Personal</title>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("portfolio-theme") === "light") {
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (error) {}
+        })();
+    </script>
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-        <a href="work.html">Work</a>
-        <a href="personal.html" aria-current="page">Personal</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div id="site-nav" class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="work.html">Work</a>
+            <a href="personal.html" aria-current="page">Personal</a>
+            <!-- Résumé stays hidden until resume.pdf is added at the repo root.
+            <a href="resume.pdf">Résumé</a>
+            -->
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme">Light</button>
+        </div>
     </nav>
 
     <section>
@@ -24,5 +44,6 @@
     <footer class="site-footer">
         <p><a href="https://github.com/Lukidom">github.com/Lukidom</a></p>
     </footer>
+    <script src="site.js"></script>
 </body>
 </html>

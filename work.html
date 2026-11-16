@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work</title>
     <link rel="stylesheet" href="style.css">
-
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("portfolio-theme") === "light") {
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (error) {}
+        })();
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="education.html">Education</a>
-        <a href="work.html" aria-current="page">Work</a>
-        <a href="personal.html">Personal</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div id="site-nav" class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="work.html" aria-current="page">Work</a>
+            <a href="personal.html">Personal</a>
+            <!-- Résumé stays hidden until resume.pdf is added at the repo root.
+            <a href="resume.pdf">Résumé</a>
+            -->
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme">Light</button>
+        </div>
     </nav>
 
     <section class="work-section">
@@ -50,5 +69,6 @@
     <footer class="site-footer">
         <p><a href="https://github.com/Lukidom">github.com/Lukidom</a></p>
     </footer>
+    <script src="site.js"></script>
 </body>
 </html>
