@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            (function () {
+                try {
+                    if (localStorage.getItem("portfolio-theme") === "light") {
+                        document.documentElement.setAttribute("data-theme", "light");
+                    }
+                } catch (error) {}
+            })();
+        </script>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <div id="site-nav" class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" aria-current="page">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="work.html">Work</a>
+                <a href="personal.html">Personal</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme">Light</button>
+            </div>
+        </nav>
+
+        <section class="projects-section">
+            <h1>Projects</h1>
+            <p class="section-lead">Programs I have built, from live web apps to servers, data, and games.</p>
+
+            <div class="project-grid">
+                <article class="project">
+                    <img class="project-shot" src="images/projects/voicelift.jpg" alt="VoiceLift sign-in screen">
+                    <h2>VoiceLift</h2>
+                    <p>A workout log you sign in to and fill by talking or by typing sets, reps, weights, and climbs. It stores the day's entries, tracks a working weight for each lift, and shows training over the last four weeks.</p>
+                    <div class="project-tags">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Supabase</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://speak-set-log.lovable.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot" src="images/projects/budget.jpg" alt="Dingo Dough sign-in screen for Easy Budget Dark">
+                    <h2>Easy Budget Dark</h2>
+                    <p>An envelope budget, published as Dingo Dough, that you sign in to. It tracks income and budget envelopes, and it has a dark and a light theme.</p>
+                    <div class="project-tags">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Supabase</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://dingo-dough.lovable.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot" src="images/projects/meal-planner.jpg" alt="Meal Planner Pal screen for setting a week of meals and a grocery list">
+                    <h2>Meal Planner Pal</h2>
+                    <p>A meal planner that builds a week of breakfast, lunch, and dinner from preferences, servings, and ingredients already in the kitchen. The grocery list stays in the browser. There is no public site yet.</p>
+                    <div class="project-tags">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot" src="images/projects/study-stronger.jpg" alt="Study Stronger timer, shown in the app as Study Warrior">
+                    <h2>Study Stronger</h2>
+                    <p>A study timer, shown in the app as Study Warrior, where clocked-in time becomes XP you can spend on a soldier. An arena for fighting other people is marked as not ready yet. There is no public site yet.</p>
+                    <div class="project-tags">
+                        <span>TypeScript</span>
+                        <span>React</span>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot is-output" src="images/projects/rust-server.jpg" alt="Page served by the Rust web server. The only heading is thing.">
+                    <h2>Multithreaded Rust Web Server</h2>
+                    <p>A Rust HTTP server that accepts connections on localhost and runs them on a pool of worker threads. It serves a home page, a five-second /sleep route, and a 404 page.</p>
+                    <div class="project-tags">
+                        <span>Rust</span>
+                        <span>HTTP</span>
+                        <span>Threading</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://github.com/Lukidom/Server_Rust_Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot is-output" src="images/projects/chat.jpg" alt="Output from a Python chat client after joining and asking who is online">
+                    <h2>Web Server Chat</h2>
+                    <p>A Python chat app with a TCP server and a client so several people can talk on a local network. The server assigns nicknames, broadcasts messages, and can list who is online.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>TCP sockets</span>
+                        <span>Threading</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://github.com/Lukidom/Project_Chat_Box" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot is-output" src="images/projects/deaths.jpg" alt="Bar chart from the deaths script: total deaths by country code, 2010 to 2019">
+                    <h2>Deaths of World</h2>
+                    <p>A Python script that loads a CSV of global deaths, checks the columns, and keeps 2010 through 2019. It totals deaths by country code and by year, then draws a bar chart and a line chart.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>pandas</span>
+                        <span>matplotlib</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://github.com/Lukidom/Project_World_Deaths" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot is-output" src="images/projects/laser.jpg" alt="Placeholder card. There is no screenshot of the Godot laser project.">
+                    <h2>Laser Project</h2>
+                    <p>A Godot 4 scene that scatters walls and mirrors, then fires a laser that reflects off the mirrors. The beam stops when it hits a goal or uses up its ten bounces.</p>
+                    <div class="project-tags">
+                        <span>Godot</span>
+                        <span>GDScript</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://github.com/Lukidom/Godot-project" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <img class="project-shot is-output" src="images/projects/chess.jpg" alt="Console output of the C++ chess board after moving a pawn from e2 to e4">
+                    <h2>C++ Chess Board</h2>
+                    <p>A C++ console program that sets up an 8 by 8 board in the standard starting position and prints it. It demonstrates one pawn move from e2 to e4. Full piece rules and check are not in yet.</p>
+                    <div class="project-tags">
+                        <span>C++</span>
+                    </div>
+                    <p class="project-links">
+                        <a href="https://github.com/Lukidom/C--CHESS" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <p><a href="https://github.com/Lukidom">github.com/Lukidom</a></p>
+        </footer>
+        <script src="site.js"></script>
+    </body>
+</html>

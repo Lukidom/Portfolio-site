@@ -5,32 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work</title>
     <link rel="stylesheet" href="style.css">
-
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("portfolio-theme") === "light") {
+                    document.documentElement.setAttribute("data-theme", "light");
+                }
+            } catch (error) {}
+        })();
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="education.html">Education</a>
-        <a href="work.html">Work</a>
-        <a href="personal.html">Personal</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div id="site-nav" class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="work.html" aria-current="page">Work</a>
+            <a href="personal.html">Personal</a>
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to light theme">Light</button>
+        </div>
     </nav>
 
-    <Section> 
+    <section class="work-section">
         <div class="work-item">
             <div class="work-text">
                 <h2>Supply Chain Management</h2>
                 <p>Operational Manager</p>
-                <p>Managed precurement for private. 
-                    oversaw operations and training completed by lab technitions for Production processes 
-                    Worked as main safety advisor to general manager 
+                <p>Managed procurement for private.
+                    Oversaw operations and training completed by lab technicians for Production processes.
+                    Worked as main safety advisor to general manager.
                 </p>
             </div>
-            <img src="images/DSC00292.jpg">
+            <img src="images/DSC00292.jpg" alt="Luke Ramirez working on a laptop at a desk">
         </div>
 
-        <div class="work-item reverse">
-            <img src="images/construction">
+        <div class="work-item">
             <div class="work-text">
                 <h2>Construction Experience</h2>
                 <p>One season</p>
@@ -38,15 +55,18 @@
             </div>
         </div>
 
-        <div class="work-item reverse">
-            <img src="images/manualpic">
+        <div class="work-item">
             <div class="work-text">
                 <h2>Manual labor</h2>
                 <p>Farm work</p>
                 <p>Warehouse</p>
             </div>
         </div>
-    </Section>
-    
+    </section>
+
+    <footer class="site-footer">
+        <p><a href="https://github.com/Lukidom">github.com/Lukidom</a></p>
+    </footer>
+    <script src="site.js"></script>
 </body>
 </html>
